@@ -1,5 +1,9 @@
-function install()
-  print("Test")
+function install(file,location)
+  shell.run("wget "..file.." "..location)
+end
+
+function installer()
+  install(https://raw.githubusercontent.com/Raven0S/SoarOS/master/startup, startup)
 end
 
 function cancel()
@@ -27,13 +31,13 @@ while true do
   input = read()
 
   if input == "Y" then
-    install()
+    installer()
   elseif input == "y" then
-   install()
+   installer()
   elseif input == "Yes" then
-    install()
+    installer()
   elseif input == "yes" then
-    install()
+    installer()
   elseif input == "N" then
    cancel()
     break
