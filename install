@@ -21,23 +21,32 @@ term.setTextColor(colors.red)
 print("Warning: This may uninstall files!")
 term.setTextColor(colors.black)
 term.setCursorPos(1,6)
-write("> ")
-input = read()
 
-if input == "Y" then
-  install()
-elseif input == "y" then
-  install()
-elseif input == "Yes" then
-  install()
-elseif input == "yes" then
-  install()
-elseif input == "N" then
-  cancel()
-elseif input == "n" then
-  cancel()
-elseif input == "No" then
-  cancel()
-elseif input == "no" then
-  cancel()
+while true do
+  write("> ")
+  input = read()
+
+  if input == "Y" then
+    install()
+  elseif input == "y" then
+   install()
+  elseif input == "Yes" then
+    install()
+  elseif input == "yes" then
+    install()
+  elseif input == "N" then
+   cancel()
+    break
+  elseif input == "n" then
+    cancel()
+    break
+  elseif input == "No" then
+    cancel()
+    break
+  elseif input == "no" then
+    cancel()
+    break
+  else
+   print("Unkown command. Please try again.")
+  end
 end
