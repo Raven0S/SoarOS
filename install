@@ -17,10 +17,11 @@ function cancel()
 end
 
 term.setBackgroundColor(colors.white)
-term.setTextColor(colors.black)
+term.setTextColor(colors.lightBlue)
 term.clear()
 term.setCursorPos(1,1)
 print("SoarOS Installer")
+term.setTextColor(colors.black)
 term.setCursorPos(1,3)
 print("Are you sure you want to install SoarOS?")
 term.setTextColor(colors.red)
