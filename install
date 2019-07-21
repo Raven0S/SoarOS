@@ -2,6 +2,14 @@ function install()
   print("Test")
 end
 
+function cancel()
+  term.setBackgroundColor(colors.black)
+  term.setTextColor(colors.white)
+  term.clear()
+  term.setCursorPos(1,1)
+  print("Installation cancelled.")
+end
+
 term.setBackgroundColor(colors.white)
 term.setTextColor(colors.black)
 term.clear()
@@ -24,4 +32,12 @@ elseif input == "Yes" then
   install()
 elseif input == "yes" then
   install()
+elseif input == "N" then
+  cancel()
+elseif input == "n" then
+  cancel()
+elseif input == "No" then
+  cancel()
+elseif input == "no" then
+  cancel()
 end
