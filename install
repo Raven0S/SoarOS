@@ -1,0 +1,25 @@
+function install()
+  print("Test")
+end
+
+term.setBackgroundColor(colors.white)
+term.clear()
+term.setCursorPos(1,1)
+print("SoarOS Installer")
+term.setCursorPos(1,3)
+print("Are you sure you want to install SoarOS?")
+term.setTextColor(colors.red)
+print("Warning: This may uninstall files!")
+term.setCursorPos(1,6)
+write("> ")
+input = read()
+
+if input == "Y" then
+  install()
+elseif input == "y" then
+  install()
+elseif input == "Yes" then
+  install()
+elseif input == "yes" then
+  install()
+end
