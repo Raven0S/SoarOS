@@ -4,6 +4,7 @@ end
 
 function installer()
   install(https://raw.githubusercontent.com/Raven0S/SoarOS/master/startup, startup)
+  os.reboot()
 end
 
 function cancel()
