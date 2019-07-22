@@ -1,7 +1,20 @@
 os.pullEvent = os.pullEventRaw
 
-term.setBackgroundColor(colors.white)
+
 term.setTextColor(colors.black)
+term.setBackgroundColor(colors.black)
+term.clear()
+term.setCursorPos(1,1)
+sleep(0.1)
+term.setBackgroundColor(colors.gray)
+term.clear()
+term.setCursorPos(1,1)
+sleep(0.1)
+term.setBackgroundColor(colors.lightGray)
+term.clear()
+term.setCursorPos(1,1)
+sleep(0.1)
+term.setBackgroundColor(colors.white)
 term.clear()
 term.setCursorPos(1,1)
 
