@@ -1,5 +1,19 @@
+os.pullEvent = os.pullEventRaw
+
 term.setBackgroundColor(colors.white)
 term.setTextColor(colors.black)
 term.clear()
 term.setCursorPos(1,1)
-print("Test")
+
+if fs.exists("new") then
+  term.setTextColor(colors.lightBlue)
+  term.clear()
+  term.setCursorPos(1,1)
+  print("SoarOS Account Creation")
+  term.setTextColor(colors.black)
+  term.setCursorPos(1,3)
+  write("Username: ")
+  username = read()
+  write("Password: ")
+  password = read()
+end
