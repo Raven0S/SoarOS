@@ -8,7 +8,7 @@ function installer()
   shell.run("pastebin get 6bg1TAmb new")
   install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/startup", "startup")
   install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/system/login","system/login")
-  install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/apis/text","text")
+  install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/apis/text","apis/text")
   os.reboot()
 end
 
