@@ -1,9 +1,9 @@
 os.pullEvent = os.pullEventRaw
 
-f = fs.open("username")
+f = fs.open("username","r")
 user = f.read()
 f.close()
-f = fs.open("password")
+f = fs.open("password","r")
 pass = f.read()
 f.close()
 
