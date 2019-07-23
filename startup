@@ -50,6 +50,7 @@ if fs.exists("new") then
   f.writeLine(password)
   f.close()
   fs.delete("new")
+  shell.run("system/login")
 else
   shell.run("system/login")
 end
