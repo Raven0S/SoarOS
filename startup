@@ -49,4 +49,7 @@ if fs.exists("new") then
   f = fs.open("password","w")
   f.writeLine(password)
   f.close()
+  fs.delete("new")
+else
+  shell.run("system/login")
 end
