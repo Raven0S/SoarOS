@@ -1,7 +1,7 @@
 os.pullEvent = os.pullEventRaw
 
 term.clear()
-print("Loading APIs...")
+print("loading APIs...")
 os.loadAPI("apis/text")
 term.setTextColor(colors.black)
 term.setBackgroundColor(colors.black)
