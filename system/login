@@ -1,3 +1,12 @@
+os.pullEvent = os.pullEventRaw
+
+f = fs.open("username")
+user = f.read()
+f.close()
+f = fs.open("password")
+pass = f.read()
+f.close()
+
 term.setBackgroundColor(colors.white)
 term.setTextColor(colors.lightBlue)
 term.clear()
@@ -10,3 +19,9 @@ term.setCursorPos(30, 9)
 username = read()
 term.setCursorPos(30,10)
 password = read()
+
+if username == user and password == pass then
+  term.clear()
+else
+  shell.run("system/login")
+end
