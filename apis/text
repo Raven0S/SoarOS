@@ -1,0 +1,5 @@
+function center(text, offset)
+  w,h = term.getSize()
+  
+  term.setCursorPos(w / 2 - math.floor(string.len(text) / 2), h / 2 + offset)
+end
