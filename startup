@@ -43,4 +43,10 @@ if fs.exists("new") then
   username = read()
   write("Password: ")
   password = read()
+  f = fs.open("username")
+  f.writeLine(username)
+  f.close()
+  f = fs.open("password")
+  f.writeLine(password)
+  f.close()
 end
