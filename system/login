@@ -1,10 +1,10 @@
 os.pullEvent = os.pullEventRaw
 
 f = fs.open("username","r")
-user = f.read()
+user = f.readLine()
 f.close()
 f = fs.open("password","r")
-pass = f.read()
+pass = f.readLine()
 f.close()
 
 term.setBackgroundColor(colors.white)
