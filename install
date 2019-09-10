@@ -1,6 +1,13 @@
 function install(file,location)
   shell.run("wget "..file.." "..location)
+  term.clear()
+  term.setCursorPos(1,1)
+  print("Installing... "..file)
+  print(math.floor(files / totalFiles * 100).."%")
 end
+
+totalFiles = 3
+files = 0
 
 function installer()
   fs.makeDir("system")
