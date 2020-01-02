@@ -1,70 +1,22 @@
-function install(file,location)
-  shell.run("wget "..file.." "..location)
-  term.clear()
-  term.setCursorPos(1,1)
-  print("Installing... "..file)
-  print(math.floor(files / totalFiles * 100).."%")
-end
-
-totalFiles = 3
-files = 0
-
-function installer()
-  fs.makeDir("system")
-  fs.makeDir("apis")
-  shell.run("pastebin get 6bg1TAmb new")
-  install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/startup", "startup")
-  install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/system/login","system/login")
-  install("https://raw.githubusercontent.com/Raven0S/SoarOS/master/apis/text","apis/text")
-  os.reboot()
-end
-
-function cancel()
-  term.setBackgroundColor(colors.black)
-  term.setTextColor(colors.white)
-  term.clear()
-  term.setCursorPos(1,1)
-  print("Installation cancelled.")
-end
-
-term.setBackgroundColor(colors.white)
-term.setTextColor(colors.lightBlue)
 term.clear()
 term.setCursorPos(1,1)
-print("SoarOS Installer")
-term.setTextColor(colors.black)
-term.setCursorPos(1,3)
-print("Are you sure you want to install SoarOS?")
-term.setTextColor(colors.red)
-print("Warning: This may uninstall files!")
-term.setTextColor(colors.black)
-term.setCursorPos(1,6)
+print("SoarOS Install")
+print("Are you sure you want to install SoarOS? (Y/n)")
+print("")
+
+function install()
+  print("Test")
+end
 
 while true do
   write("> ")
   input = read()
-
-  if input == "Y" then
-    installer()
-  elseif input == "y" then
-   installer()
-  elseif input == "Yes" then
-    installer()
-  elseif input == "yes" then
-    installer()
-  elseif input == "N" then
-   cancel()
+  if string.lower(input) == "y" or string.lower(input) == "yes" then
+    install()
+  elseif string.lower(input) == "n" or string.lower(input) == "no" then
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Installation cancelled")
     break
-  elseif input == "n" then
-    cancel()
-    break
-  elseif input == "No" then
-    cancel()
-    break
-  elseif input == "no" then
-    cancel()
-    break
-  else
-   print("Unkown command. Please try again.")
   end
 end
