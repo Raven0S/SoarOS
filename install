@@ -12,7 +12,6 @@ print("")
 function install()
   for i,dir in pairs(dirs) do
     fs.makeDir(dir)
-    os.reboot()
   end
   for i,file in pairs(files) do
     shell.run("wget "..url..file.." "..file)
@@ -24,6 +23,7 @@ while true do
   input = read()
   if string.lower(input) == "y" or string.lower(input) == "yes" then
     install()
+    os.reboot()
   elseif string.lower(input) == "n" or string.lower(input) == "no" then
     term.clear()
     term.setCursorPos(1,1)
