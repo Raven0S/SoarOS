@@ -18,5 +18,7 @@ while true do
     term.setCursorPos(1,1)
     print("Installation cancelled")
     break
+  else
+    print("Unknown command. Please try again")
   end
 end
