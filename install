@@ -1,3 +1,6 @@
+branch = "master"
+dirs = {"rSystem", "rPrograms"}
+
 term.clear()
 term.setCursorPos(1,1)
 print("SoarOS Install")
@@ -5,7 +8,9 @@ print("Are you sure you want to install SoarOS? (Y/n)")
 print("")
 
 function install()
-  print("Test")
+  for i,dir in pairs(dirs) do
+    fs.makeDir(dir)
+  end
 end
 
 while true do
