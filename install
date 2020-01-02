@@ -1,6 +1,7 @@
 branch = "master"
 url = "https://raw.githubusercontent.com/Raven0S/SoarOS/"..branch.."/"
 dirs = {"rSystem", "rPrograms"}
+files = {"startup"}
 
 term.clear()
 term.setCursorPos(1,1)
@@ -12,6 +13,9 @@ function install()
   for i,dir in pairs(dirs) do
     fs.makeDir(dir)
     os.reboot()
+  end
+  for i,file in pairs(files) do
+    shell.run("wget "..url..file.." "..file)
   end
 end
 
