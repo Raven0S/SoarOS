@@ -11,6 +11,7 @@ print("")
 function install()
   for i,dir in pairs(dirs) do
     fs.makeDir(dir)
+    os.reboot()
   end
 end
 
