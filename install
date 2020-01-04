@@ -2,6 +2,8 @@ branch = "master"
 url = "https://raw.githubusercontent.com/Raven0S/SoarOS/"..branch.."/"
 dirs = {"rSystem", "rPrograms"}
 files = {"startup"}
+fileNumber = #files
+currentNumber = 0
 
 term.clear()
 term.setCursorPos(1,1)
@@ -14,6 +16,10 @@ function install()
     fs.makeDir(dir)
   end
   for i,file in pairs(files) do
+    currentNumber = currentNumber+1
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Files: "..currentNumber.."/"..fileNumber)
     shell.run("wget "..url..file.." "..file)
   end
 end
@@ -23,6 +29,7 @@ while true do
   input = read()
   if string.lower(input) == "y" or string.lower(input) == "yes" then
     install()
+    sleep(1)
     os.reboot()
   elseif string.lower(input) == "n" or string.lower(input) == "no" then
     term.clear()
