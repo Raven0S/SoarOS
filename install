@@ -21,6 +21,7 @@ function install()
     term.setCursorPos(1,1)
     print("Files: "..currentNumber.."/"..fileNumber)
     print("File Name: "..file)
+    print("")
     shell.run("wget "..url..file.." "..file)
   end
 end
