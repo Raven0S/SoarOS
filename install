@@ -1,7 +1,7 @@
 branch = "master"
 url = "https://raw.githubusercontent.com/Raven0S/SoarOS/"..branch.."/"
-dirs = {"rSystem", "rPrograms", "rAPIs"}
-files = {"startup", "rSystem/login"}
+dirs = {"system", "programs", "apis"}
+files = {"startup", "system/login"}
 fileNumber = #files
 currentNumber = 0
 
