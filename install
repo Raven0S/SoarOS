@@ -26,10 +26,21 @@ function install()
   end
 end
 
+function clean()
+  print("Cleaning old files...")
+  for i,dir in pairs(dirs) do
+    fs.delete(dir)
+  end
+  for i,file in pairs(files) do
+    fs.delete(file)
+  end
+end
+
 while true do
   write("> ")
   input = read()
   if string.lower(input) == "y" or string.lower(input) == "yes" then
+    clean()
     install()
     sleep(1)
     os.reboot()
