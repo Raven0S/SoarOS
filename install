@@ -9,6 +9,7 @@ term.clear()
 term.setCursorPos(1,1)
 print("SoarOS Install")
 print("Are you sure you want to install SoarOS? (Y/n)")
+print("Note: SoarOS requires a modem to be put on the back of your computer")
 print("")
 
 function install()
