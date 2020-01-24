@@ -1,4 +1,9 @@
 w,h = term.getSize()
+label = os.getComputerLabel()
+
+function createAccount()
+
+end
 
 term.clear()
 term.setCursorPos(1,1)
@@ -35,3 +40,6 @@ term.clear()
 term.setCursorPos(w/2 - string.len("SoarOS") / 2, h/2)
 print("SoarOS")
 sleep(0.1)
+if label ~= "SoarOS" then
+  createAccount()
+end
